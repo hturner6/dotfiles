@@ -5,6 +5,9 @@ Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'rking/ag.vim'
 Plug 'xuhdev/vim-latex-live-preview'
+Plug 'tpope/vim-surround'
+Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
 call plug#end()
 
 set nu "set line numbers
@@ -53,3 +56,4 @@ call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 call NERDTreeHighlightFile('py', 'Blue', 'none', 'blue', '#151515')
 call NERDTreeHighlightFile('cc', 'Red', 'none', 'red', '#151515')
+
