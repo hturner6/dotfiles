@@ -38,6 +38,7 @@ proper contrast thresholds) and drive colours from the wallpaper everywhere.
 | Item | Priority | Effort | Risk | Status | Notes |
 |---|---|---|---|---|---|
 | Install wallust, port `wal` → `wallust` in scripts | P2 | M | | todo | Backend + contrast threshold so bar/menus stay legible |
+| Theme seam (`~/.config/theme/colors.css`) | — | — | | ✅ done | Semantic tokens shared by waybar + swayosd; becomes a wallust template. Restyle notes in `theme/README.md` |
 | Template: waybar | P2 | M | | todo | Was "configure waybar colors" + "use different font colors" |
 | Template: wlogout | P2 | S | | todo | Restyle only — functionality is fine |
 | Template: rofi | P2 | S | | todo | Was "use pywal colors" |
