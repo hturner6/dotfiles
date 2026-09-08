@@ -7,13 +7,17 @@ priority, effort, and risk so "what next?" is answerable at a glance.
 - **Effort** — S ≤30 min · M ~an afternoon · L ~a weekend
 - **Risk** — ⚠️ can break the session (login / display / audio / idle-lock); do these with time to recover
 
-## Do next (P1)
+## Do next
 
-1. Clipboard history — `cliphist` + `wl-clip-persist`, `Super+V` via rofi
-2. Screenshot menu — `Print` → rofi picker → `hyprshot` → `swappy`
-3. On-screen display — `swayosd` for volume/brightness feedback
-4. `dots` alias — `git -C ~/dotfiles`
-5. Fix the waybar media module — lock to Spotify (display + click + scroll)
+P1 batch — **all done 2026-09-09**:
+
+1. ✅ Clipboard history — `cliphist` + `wl-clip-persist`, `Super+V` pick / `Super+Shift+V` delete
+2. ✅ Screenshot menu — `Print` → rofi picker → `hyprshot` → `swappy` (saves to `~/Pictures/Screenshots`)
+3. ✅ On-screen display — `swayosd` on the volume/brightness/mic keys
+4. ✅ `dots` alias — `git -C ~/dotfiles`
+5. ✅ Waybar media module — all actions target `--player spotify`; also fixed `reload.sh`
+
+Next up: the **wallust theming epic** (P2), then `power-profiles-daemon` / `hyprpolkit-agent` / `pkglist.txt`.
 
 ---
 
@@ -22,7 +26,7 @@ priority, effort, and risk so "what next?" is answerable at a glance.
 | Item | Priority | Effort | Risk | Status | Notes |
 |---|---|---|---|---|---|
 | Add dotfiles to git | — | — | | ✅ done | GNU stow, `github.com/hturner6/dotfiles` |
-| `dots` alias for `git -C ~/dotfiles` | P1 | S | | todo | Frictionless config commits |
+| `dots` alias for `git -C ~/dotfiles` | P1 | S | | ✅ done | Frictionless config commits |
 | `pkglist.txt` (`pacman -Qqe`) + `bootstrap.sh` | P2 | M | | todo | Installs stow + packages + stows everything; makes a dead SSD recoverable |
 | Configure zsh | P3 | S | | todo | `zsh-autosuggestions` + `zsh-syntax-highlighting` + `fzf` keybindings + history dedup/size tuning |
 
@@ -65,7 +69,7 @@ proper contrast thresholds) and drive colours from the wallpaper everywhere.
 |---|---|---|---|---|---|
 | Base setup | — | — | | ✅ done | |
 | Icons same colour | — | — | | ✅ done | |
-| Fix media module | P1 | S | | todo | `on-click`/`on-scroll`/`exec` all lock to `--player spotify`; stops Firefox/VLC hijacking |
+| Fix media module | P1 | S | | ✅ done | all actions use `playerctl --player spotify`; also fixed `scripts/reload.sh` |
 | Weather module | P3 | S | | todo | Replaces the cut lockscreen-weather idea |
 | Different font colours | P2 | S | | todo | Falls out of the wallust template |
 | Separate media-transport bar (play/pause, shuffle, loop) | P3 | M | | todo | Second waybar instance; nice-to-have toy — fn keys cover daily use |
@@ -82,9 +86,9 @@ proper contrast thresholds) and drive colours from the wallpaper everywhere.
 
 | Item | Priority | Effort | Risk | Status | Notes |
 |---|---|---|---|---|---|
-| Clipboard history — `cliphist` + `wl-clip-persist`, `Super+V` rofi | P1 | S | | todo | No clipboard history today |
-| Screenshot menu — `Print` → rofi (Region/Window/Full/Delayed) → `hyprshot` → `swappy`, save to `~/Pictures/Screenshots/` + clipboard | P1 | S | | todo | `hyprshot`/`grim`/`slurp` installed but unbound |
-| On-screen display — `swayosd` | P1 | M | | todo | No visual feedback on fn keys |
+| Clipboard history — `cliphist` + `wl-clip-persist`, `Super+V` rofi | P1 | S | | ✅ done | No clipboard history today |
+| Screenshot menu — `Print` → rofi (Region/Window/Full/Delayed) → `hyprshot` → `swappy`, save to `~/Pictures/Screenshots/` + clipboard | P1 | S | | ✅ done | `hyprshot`/`grim`/`slurp` installed but unbound |
+| On-screen display — `swayosd` | P1 | M | | ✅ done | No visual feedback on fn keys |
 | `power-profiles-daemon` + add to waybar module list | P2 | S | | todo | Module already configured; daemon not installed. T480 battery |
 | `hyprpolkit-agent` + autostart | P2 | S | | todo | Nothing draws privilege prompts (USB mount in Thunar, GParted, gnome-disks fail silently) |
 | Track `~/.vim_runtime/my_configs.vim` in the `vim` stow package | P2 | M | | todo | Leader maps, plugins, colours to match |
