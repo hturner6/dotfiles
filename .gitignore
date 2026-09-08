@@ -1,0 +1,11 @@
+# python
+__pycache__/
+*.pyc
+
+# pywal runtime output (templates are tracked, generated cache is not)
+.config/wal/cache/
+
+# editor/OS cruft
+*.swp
+*~
+.DS_Store

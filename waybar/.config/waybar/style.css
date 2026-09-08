@@ -1,0 +1,231 @@
+@import url("/home/hturner/.cache/wal/colors-waybar.css");
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @foreground;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+tooltip {
+	color: @color2;
+	background: @color0;
+	opacity: 0.8;
+	border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: @color15;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 10px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+/* defines the styling for all xml menus */
+menu {
+    border-radius: 15px;
+	background: @color0;
+	color: #B5E8E0;
+}
+
+menuitem {
+    border-radius: 15px;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+/* defines common style */
+#clock,
+#battery,
+#bluetooth,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#custom-pacman,
+#custom-media,
+#custom-notification,
+#workspaces,
+#custom-power,
+#mpd {
+    padding: 0 10px;
+    color: @foreground;
+    margin: 8 0;
+    border-radius: 12px;
+    background-color: @background;
+}
+
+#custom-menu {
+    font-size: 24px;
+    min-width: 40px;
+    color: #40C057;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#window,
+#workspaces {
+    font-weight: bold;
+    margin: 8 0px;
+    border-radius: 18px;
+    border-color: @background;
+}
+
+#workspaces button {
+    min-width: 40px;
+    font-size: 40px;
+    padding: 0px 0.5px;
+    background-color: transparent;
+    text-shadow: none;
+    border-radius: 8px;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.empty {
+    color: #666666;
+}
+
+#workspaces button.active {
+    color: @foreground;
+    background-color: @color9;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#custom-media {
+    font-weight: bold;
+    margin: 8 0px;
+    border-radius: 18px;
+    padding: 0px 10px;
+    color: #66cc99;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+    color: #ffa000;
+}
+
+#idle_inhibitor {
+    color: @color1;
+}
+
+#pulseaudio {
+    color: @color2;
+}
+
+#pulseaudio:hover {
+    background-color: @color2;
+    color: @background;
+}
+
+#network {
+    color: @color3;
+}
+
+#bluetooth {
+    color: @color4;
+}
+
+#backlight {
+    color: @color5;
+}
+
+#battery {
+    color: @color6;
+}
+
+#battery.charging, #battery.plugged {
+    color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        color: #ffffff;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#clock {
+    color: @color7;
+}
+
+#tray {
+    color: #2980b9;
+}
+
+#tray > .passive {
+    background-color: transparent;
+}
+
+#tray > .active {
+    padding: 0 10px;
+    color: #2980b9;
+    margin: 8 0;
+    border-radius: 6px;
+    background-color: rgba(43, 48, 59, 0.8);
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    color: #eb4d4b;
+}
+
+#custom-power {
+    font-size: 24px;
+    color: #ff0000;
+}

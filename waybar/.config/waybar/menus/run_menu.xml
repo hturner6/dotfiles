@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkMenu" id="menu">
+    <child>
+		<object class="GtkMenuItem" id="run">
+			<property name="label">Run</property>
+        </object>
+	</child>
+    <child>
+		<object class="GtkMenuItem" id="reload">
+			<property name="label">Reload configs</property>
+		</object>
+    </child>
+    <child>
+		<object class="GtkMenuItem" id="neofetch">
+			<property name="label">Neofetch</property>
+		</object>
+    </child>
+    <child>
+		<object class="GtkMenuItem" id="update">
+			<property name="label">Update</property>
+		</object>
+    </child>
+  </object>
+</interface>
