@@ -14,6 +14,7 @@ Each top-level directory is a stow package mirroring `$HOME`:
     git clone https://github.com/hturner6/dotfiles ~/dotfiles
     cd ~/dotfiles
     stow hypr waybar rofi wlogout swaync wal alacritty kitty dunst ranger jrnl zsh bash vim
+    stow --no-folding easyeffects
 
 Remove a package's symlinks with `stow -D <pkg>`; refresh after adding files with `stow -R <pkg>`.
 
@@ -35,3 +36,4 @@ Remove a package's symlinks with `stow -D <pkg>`; refresh after adding files wit
 | zsh       | `~/.zshrc` |
 | bash      | `~/.bashrc` |
 | vim       | `~/.vimrc` |
+| easyeffects | `~/.config/autostart/`, `~/.config/easyeffects/`, `~/.local/share/easyeffects/output/` — audio DSP for the laptop speakers (`t480-speakers` preset). Needs `stow --no-folding` since the target dirs hold non-stow files. |

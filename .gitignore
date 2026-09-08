@@ -5,6 +5,13 @@ __pycache__/
 # pywal runtime output (templates are tracked, generated cache is not)
 .config/wal/cache/
 
+# easyeffects: track only the rc files stowed via the package, not app-generated extras
+easyeffects/.config/easyeffects/db/*
+!easyeffects/.config/easyeffects/db/bassEnhancerrc
+!easyeffects/.config/easyeffects/db/equalizerrc
+!easyeffects/.config/easyeffects/db/limiterrc
+!easyeffects/.config/easyeffects/db/easyeffectsrc
+
 # editor/OS cruft
 *.swp
 *~

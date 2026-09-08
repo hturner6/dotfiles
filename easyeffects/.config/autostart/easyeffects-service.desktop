@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=EasyEffects (service)
+Comment=Audio effects for PipeWire (background service)
+Exec=easyeffects --gapplication-service
+Icon=easyeffects
+StartupNotify=false
+Terminal=false
+X-GNOME-Autostart-Delay=2
+X-KDE-autostart-phase=2
