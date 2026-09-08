@@ -119,7 +119,10 @@ label:focus {
     padding: 0px 0.5px;
     background-color: transparent;
     text-shadow: none;
-    border-radius: 8px;
+    /* THEME: match the pill radius; 2px transparent border so active/urgent
+       borders don't shift the other buttons */
+    border: 2px solid transparent;
+    border-radius: 12px;
 }
 
 #workspaces button:hover {
@@ -133,10 +136,12 @@ label:focus {
 #workspaces button.active {
     color: @foreground;
     background-color: @color9;
+    border: 2px solid @border;
 }
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
+    border: 2px solid @border;
 }
 
 #custom-media {
