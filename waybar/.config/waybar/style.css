@@ -219,16 +219,23 @@ label:focus {
     color: #2980b9;
 }
 
+/* THEME: the whole tray is one pill (icons stretch oddly if pilled individually) */
+#tray {
+    padding: 0 8px;
+    margin: 8 0;
+    border-radius: 12px;
+    border: 2px solid @border;
+    background-color: @background;
+}
+
 #tray > .passive {
     background-color: transparent;
 }
 
 #tray > .active {
-    padding: 0 10px;
     color: #2980b9;
-    margin: 8 0;
-    border-radius: 6px;
-    background-color: rgba(43, 48, 59, 0.8);
+    background-color: transparent;
+    padding: 0 4px;
 }
 
 #tray > .needs-attention {

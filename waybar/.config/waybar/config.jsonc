@@ -2,7 +2,7 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 50, // Waybar height (to be removed for auto height)
+    // height auto-fits the modules (40px workspace glyphs + pill borders ~62px)
     // "width": 1280, // Waybar width
     "spacing": 8, // Gaps between modules (4px)
     "mode": "dock",
@@ -87,7 +87,7 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 16,
         "spacing": 10,
          "icons": {
            "blueman": "bluetooth"
