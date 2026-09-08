@@ -144,3 +144,6 @@ alias gp='git push origin master'
 
 # Created by `pipx` on 2025-09-03 23:19:23
 export PATH="$PATH:/home/hturner/.local/bin"
+
+# dotfiles repo shortcut
+alias dots='git -C ~/dotfiles'
