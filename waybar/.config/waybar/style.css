@@ -238,6 +238,11 @@ label:focus {
     padding: 0 4px;
 }
 
+/* THEME: light halo so dark/monochrome app icons stay visible on the dark pill */
+#tray image {
+    -gtk-icon-shadow: 0 0 3px @fg, 0 0 6px alpha(@fg, 0.6);
+}
+
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     color: #eb4d4b;
