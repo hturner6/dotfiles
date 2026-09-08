@@ -1,0 +1,64 @@
+/*
+ * swayosd — volume / brightness / caps popup.
+ * Matched to the waybar module look.  GTK4 CSS.
+ *
+ * Colours: semantic tokens from ~/.config/theme/colors.css
+ * THEME geometry (keep in sync with waybar/style.css):
+ *   radius 16px · 2px border · 13px FontAwesome/Roboto
+ */
+
+@import url("file:///home/hturner/.config/theme/colors.css");
+
+window#osd {
+  border-radius: 16px;
+  border: 2px solid @border;
+  background: @bg;
+}
+
+window#osd #container {
+  margin: 16px;
+}
+
+window#osd image,
+window#osd label {
+  color: @fg;
+  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+window#osd progressbar:disabled,
+window#osd image:disabled {
+  opacity: 0.5;
+}
+
+window#osd progressbar,
+window#osd segmentedprogress {
+  min-height: 8px;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+}
+
+window#osd trough,
+window#osd segment {
+  min-height: inherit;
+  border-radius: inherit;
+  border: none;
+  background: alpha(@fg, 0.25);
+}
+
+window#osd progress,
+window#osd segment.active {
+  min-height: inherit;
+  border-radius: inherit;
+  border: none;
+  background: @accent;
+}
+
+window#osd segment {
+  margin-left: 8px;
+}
+
+window#osd segment:first-child {
+  margin-left: 0;
+}

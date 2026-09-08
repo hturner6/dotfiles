@@ -1,4 +1,7 @@
-@import url("/home/hturner/.cache/wal/colors-waybar.css");
+/* Colours: semantic tokens (also re-exports pywal @background/@colorN).
+   THEME geometry lives inline below — keep radius/font in sync with
+   ~/.config/swayosd/style.css. */
+@import url("file:///home/hturner/.config/theme/colors.css");
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
