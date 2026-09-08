@@ -59,6 +59,7 @@ label:focus {
 }
 
 /* defines common style */
+/* THEME: pill = @background fill + 2px @border, matching the swayosd popup */
 #clock,
 #battery,
 #bluetooth,
@@ -84,6 +85,7 @@ label:focus {
     color: @foreground;
     margin: 8 0;
     border-radius: 12px;
+    border: 2px solid @border;
     background-color: @background;
 }
 
@@ -108,7 +110,7 @@ label:focus {
     font-weight: bold;
     margin: 8 0px;
     border-radius: 18px;
-    border-color: @background;
+    border: 2px solid @border;
 }
 
 #workspaces button {
@@ -141,6 +143,7 @@ label:focus {
     font-weight: bold;
     margin: 8 0px;
     border-radius: 18px;
+    border: 2px solid @border;
     padding: 0px 10px;
     color: #66cc99;
     min-width: 100px;
