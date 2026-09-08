@@ -16,6 +16,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("hyprsunset")
     hl.exec_cmd("wal -R &")
     hl.exec_cmd("swaync")
+    hl.exec_cmd("swayosd-server &")
     -- clipboard history + keep contents alive after the source app closes
     hl.exec_cmd("wl-paste --type text --watch cliphist store &")
     hl.exec_cmd("wl-paste --type image --watch cliphist store &")
