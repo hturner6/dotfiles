@@ -1,0 +1,12 @@
+[Unit]
+Description=Unblock Bluetooth radio at boot (ThinkPad rfkill switch defaults to blocked)
+After=bluetooth.service
+Before=bluetooth.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/rfkill unblock bluetooth
+
+[Install]
+WantedBy=multi-user.target
