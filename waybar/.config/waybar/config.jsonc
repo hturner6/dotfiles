@@ -93,6 +93,12 @@
            "blueman": "bluetooth"
          }
     },
+    "bluetooth": {
+        "on-click": "blueman-manager",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n{status}\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<tt>{calendar}</tt>",
