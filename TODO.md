@@ -42,7 +42,7 @@ proper contrast thresholds) and drive colours from the wallpaper everywhere.
 | Template: waybar | P2 | M | | todo | Was "configure waybar colors" + "use different font colors" |
 | Template: wlogout | P2 | S | | todo | Restyle only — functionality is fine |
 | Template: rofi | P2 | S | | todo | Was "use pywal colors" |
-| Restyle swaync panel + DND toggle | P3 | S | | todo | swaync = the notification daemon; works, just needs theme match |
+| Restyle swaync panel + DND toggle | P3 | S | | ✅ done | `style.css` now imports `theme/colors.css`; overrides the stock gray `:root` vars (notif bg/border/text/hover) to match waybar/rofi |
 | `hypr/colors.conf` fed by wallust | P2 | S | | todo | Was "define colors in hypr/config/colors.conf" |
 | `wallpaper.sh` regenerates palette + reloads waybar/rofi/swaync/hypr | P2 | S | | todo | The "persist color schemes" item, done properly |
 

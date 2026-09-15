@@ -1,3 +1,5 @@
+@import url("file:///home/hturner/.config/theme/colors.css");
+
 :root {
   --cc-bg: rgba(46, 46, 46, 0.7);
   --noti-border-color: rgba(255, 255, 255, 0.15);
@@ -25,6 +27,26 @@
   --group-collapse-tranistion: opacity 400ms ease-in-out;
   --hover-transition: var(--hover-tranistion);
   --group-collapse-transition: var(--group-collapse-tranistion);
+}
+
+/* THEME: overrides the stock grays above with the shared pywal palette
+   (theme/colors.css), matching waybar/swayosd. --noti-bg stays an
+   untouched "R, G, B" triplet (needed for the rgba(var(--noti-bg), ..)
+   calls below) — those specific rules get their own override further
+   down instead, since a CSS custom property can't split a named color
+   into components. */
+:root {
+  --cc-bg: alpha(@bg, 0.9);
+  --noti-border-color: @border;
+  --noti-bg-darker: shade(@bg, 0.8);
+  --noti-bg-hover: shade(@bg, 1.3);
+  --noti-bg-focus: alpha(@accent, 0.25);
+  --noti-close-bg: alpha(@fg, 0.12);
+  --noti-close-bg-hover: alpha(@fg, 0.22);
+  --text-color: @fg;
+  --text-color-disabled: alpha(@fg, 0.5);
+  --bg-selected: @accent;
+  --noti-bg-alt: shade(@bg, 1.15);
 }
 
 /* Fallback for older CSS themes */
@@ -558,4 +580,20 @@ notificationwindow, blankwindow, blankwindow {
 .widget-inhibitors > button {
   margin-left: 8px;
   border-radius: var(--border-radius);
+}
+
+/* THEME: the rgba(var(--noti-bg), alpha) rules above can't be retargeted
+   through the :root override (a custom property can't split a named
+   color into R/G/B components), so override the actual background here
+   instead, same selectors as the stock rules. */
+.notification-row .notification-background .notification {
+  background: alpha(@bg, 0.9);
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button {
+  background: alpha(@bg, 0.9);
+}
+
+.notification-group.collapsed .notification-row .notification {
+  background-color: @bg;
 }
