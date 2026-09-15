@@ -80,7 +80,7 @@ proper contrast thresholds) and drive colours from the wallpaper everywhere.
 | Item | Priority | Effort | Risk | Status | Notes |
 |---|---|---|---|---|---|
 | App launcher | — | — | | ✅ done | |
-| Power menu launcher | P3 | S | | todo | Keeping wlogout on `Super+M`; only build this if wlogout annoys |
+| Power menu launcher | P3 | S | | ✅ done | `scripts/powermenu.sh` on `Super+Shift+M`, alongside wlogout on `Super+M`. Also added `rofi/theme.rasi` — pywal's rofi template had no rounding/border/spacing at all, so this themes every rofi menu, not just this one |
 | Customise config (layout/behaviour beyond theme) | P3 | S | | todo | |
 
 ## Additions (new — from setup review)
