@@ -23,4 +23,4 @@
 @define-color accent   @color9;       /* active / progress / fill   */
 @define-color accent2  @color2;       /* secondary accent           */
 @define-color urgent   #eb4d4b;       /* errors, critical battery   */
-@define-color border   @color15;      /* hairline borders           */
+@define-color border   alpha(@accent, 0.45); /* hairline borders, tinted with the accent */

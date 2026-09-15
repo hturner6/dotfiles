@@ -23,6 +23,7 @@ local function loadWalColors()
 end
 
 local function cssRgbaToHyprHex(css)
+    if not css then return "rgba(1a1a1aee)" end -- pywal cache missing (fresh install); fall back to a neutral color
     local r, g, b, a = css:match("rgba%((%d+),%s*(%d+),%s*(%d+),%s*([%d.]+)%)")
     if not r then return css end -- not a css rgba string, pass through unchanged
     local ai = math.floor(tonumber(a) * 255 + 0.5)
