@@ -84,6 +84,13 @@ handle_extension() {
             lynx -dump -- "${FILE_PATH}" && exit 5
             elinks -dump "${FILE_PATH}" && exit 5
             ;; # Continue with next handler on failure
+
+        # JSON
+        json)
+            # Pretty-print + colorize; malformed JSON falls through to
+            # the generic syntax-highlight handler below.
+            jq -C . -- "${FILE_PATH}" 2>/dev/null && exit 5
+            ;; # Continue with next handler on failure
     esac
 }
 

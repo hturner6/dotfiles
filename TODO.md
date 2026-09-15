@@ -93,7 +93,7 @@ proper contrast thresholds) and drive colours from the wallpaper everywhere.
 | `power-profiles-daemon` + add to waybar module list | P2 | S | | ✅ done | Installed + enabled; added to `modules-right` in `config.jsonc` |
 | `hyprpolkit-agent` + autostart | P2 | S | | ✅ done | Package is `hyprpolkitagent`; ships its own systemd user service — `systemctl --user enable --now hyprpolkitagent.service`, no autostart.lua entry needed |
 | Track `~/.vim_runtime/my_configs.vim` in the `vim` stow package | P2 | M | | todo | Leader maps, plugins, colours to match |
-| Ranger JSON preview | P2 | S | | todo | `scope.sh` + `jq` |
+| Ranger JSON preview | P2 | S | | ✅ done | `scope.sh` + `jq -C`; malformed JSON falls back to the generic syntax highlighter |
 | `xdg-desktop-portal-hyprland` | P3 | S | | todo | Only needed if screen-sharing (Discord/browser) |
 
 ---
