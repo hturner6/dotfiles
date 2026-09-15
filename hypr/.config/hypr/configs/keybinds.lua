@@ -25,6 +25,7 @@ hl.bind("Print", hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/screenshot.sh"))
 -- Control bindings
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(defaults.logoutMenu))
+hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/powermenu.sh"))
 hl.bind(mainMod .. " + Space", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd(defaults.picker))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())

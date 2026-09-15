@@ -1,0 +1,60 @@
+/*
+ * Geometry/shape layer on top of pywal's colors-rofi-dark (colours only,
+ * no rounding/border/spacing at all — that's why every rofi menu looked
+ * completely stock). Mirrors the waybar pill look: rounded, accent-tinted
+ * border, dark fill. Applies to every rofi invocation (drun, dmenu,
+ * filebrowser, window switcher, power menu) since it's imported from
+ * config.rasi.
+ */
+
+* {
+    accent: @active-background;
+}
+
+#window {
+    width: 480px;
+    border: 2px solid;
+    border-color: @accent;
+    border-radius: 14px;
+    padding: 14px;
+    location: center;
+}
+
+#mainbox {
+    spacing: 10px;
+    padding: 0;
+    border: 0;
+}
+
+#inputbar {
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: @alternate-normal-background;
+    children: [ prompt, textbox-prompt-colon, entry, case-indicator ];
+}
+
+#prompt {
+    text-color: @accent;
+}
+
+#listview {
+    border: 0;
+    spacing: 4px;
+    padding: 4px 0 0;
+    lines: 8;
+    scrollbar: false;
+}
+
+#element {
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+#element selected {
+    background-color: @accent;
+    text-color: @background;
+}
+
+#element-text {
+    vertical-align: 0.5;
+}
