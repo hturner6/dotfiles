@@ -83,15 +83,61 @@ label:focus {
 #mpd {
     padding: 0 10px;
     color: @foreground;
-    margin: 8 0;
+    /* Gaps between pills now live here (margin-right) instead of the
+       waybar "spacing" config, so the battery trio below can zero
+       theirs out and sit flush against each other. */
+    margin: 8px 8px 8px 0;
     border-radius: 12px;
     border: 2px solid @border;
     background-color: @background;
 }
 
+/* THEME: icon-only pills (no text to balance the glyph) — FontAwesome
+   glyphs sit visually left of their advance box, so nudge padding right
+   to re-center them. */
+#idle_inhibitor,
+#power-profiles-daemon {
+    padding: 0 12px 0 8px;
+}
+
+/* THEME: same colour as #battery — visually groups it with the battery
+   pills it sits next to now, since it's really "battery performance". */
+#power-profiles-daemon {
+    color: @color6;
+}
+
+/* THEME: merge power-profiles-daemon + battery + battery#bat1 into one
+   pill (modules-right order: power-profiles-daemon, battery, battery.bat1).
+   Waybar's "module#name" syntax makes both battery instances share the
+   #battery id and adds a .bat1 class to the second one. */
+#power-profiles-daemon {
+    border-radius: 12px 0 0 12px;
+    border-right: none;
+    margin-right: 0;
+    /* Tighten the seam side now that there's no border to visually
+       separate it from #battery. */
+    padding-right: 6px;
+}
+
+#battery:not(.bat1) {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin-right: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#battery.bat1 {
+    border-radius: 0 12px 12px 0;
+    border-left: none;
+    padding-left: 8px;
+}
+
 #custom-menu {
     font-size: 24px;
     min-width: 40px;
+    margin-right: 8px;
     color: #40C057;
 }
 
@@ -108,7 +154,7 @@ label:focus {
 #window,
 #workspaces {
     font-weight: bold;
-    margin: 8 0px;
+    margin: 8px 8px 8px 0;
     border-radius: 18px;
     border: 2px solid @border;
 }
@@ -146,7 +192,7 @@ label:focus {
 
 #custom-media {
     font-weight: bold;
-    margin: 8 0px;
+    margin: 8px 8px 8px 0;
     border-radius: 18px;
     border: 2px solid @border;
     padding: 0px 10px;
@@ -222,7 +268,7 @@ label:focus {
 /* THEME: the whole tray is one pill (icons stretch oddly if pilled individually) */
 #tray {
     padding: 0 8px;
-    margin: 8 0;
+    margin: 8px 8px 8px 0;
     border-radius: 12px;
     border: 2px solid @border;
     background-color: @background;

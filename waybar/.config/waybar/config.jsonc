@@ -4,7 +4,9 @@
     "position": "bottom", // Waybar position (top|bottom|left|right)
     // height auto-fits the modules (40px workspace glyphs + pill borders ~62px)
     // "width": 1280, // Waybar width
-    "spacing": 8, // Gaps between modules (4px)
+    // Gaps between modules are handled via CSS margin instead of this,
+    // so the battery/power-profile trio can be merged into one pill.
+    "spacing": 0,
     "mode": "dock",
     "exclusive": true,
     // Choose the order of the modules
@@ -21,6 +23,7 @@
         "network",
         "bluetooth",
         "backlight",
+        "power-profiles-daemon",
         "battery",
         "battery#bat1",
         "clock",
@@ -161,8 +164,8 @@
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": true,
       "format-icons": {
-        "default": "",
-        "performance": "",
+        "default": "",
+        "performance": "",
         "balanced": "",
         "power-saver": ""
       }

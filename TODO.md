@@ -90,7 +90,7 @@ proper contrast thresholds) and drive colours from the wallpaper everywhere.
 | Clipboard history — `cliphist` + `wl-clip-persist`, `Super+V` rofi | P1 | S | | ✅ done | No clipboard history today |
 | Screenshot menu — `Print` → rofi (Region/Window/Full/Delayed) → `hyprshot` → `swappy`, save to `~/Pictures/Screenshots/` + clipboard | P1 | S | | ✅ done | `hyprshot`/`grim`/`slurp` installed but unbound |
 | On-screen display — `swayosd` | P1 | M | | ✅ done | No visual feedback on fn keys |
-| `power-profiles-daemon` + add to waybar module list | P2 | S | | todo | Module already configured; daemon not installed. T480 battery |
+| `power-profiles-daemon` + add to waybar module list | P2 | S | | ✅ done | Installed + enabled; added to `modules-right` in `config.jsonc` |
 | `hyprpolkit-agent` + autostart | P2 | S | | todo | Nothing draws privilege prompts (USB mount in Thunar, GParted, gnome-disks fail silently) |
 | Track `~/.vim_runtime/my_configs.vim` in the `vim` stow package | P2 | M | | todo | Leader maps, plugins, colours to match |
 | Ranger JSON preview | P2 | S | | todo | `scope.sh` + `jq` |
