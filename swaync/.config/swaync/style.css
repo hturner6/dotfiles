@@ -341,7 +341,7 @@ notificationwindow, blankwindow, blankwindow {
 
 .control-center {
   /* The Control Center which contains the old notifications + widgets */
-  background: var(--cc-bg);
+  background: alpha(@bg, 0.97);
   color: var(--text-color);
   border-radius: var(--border-radius);
 }
@@ -390,15 +390,41 @@ notificationwindow, blankwindow, blankwindow {
   border-radius: var(--border-radius);
 }
 
+/* THEME: title/DND get the same card treatment as a notification (bg +
+   accent-tinted border) instead of sitting flush against the panel
+   background with default GTK button/switch chrome. */
+.widget-title,
+.widget-dnd {
+  margin: 8px 8px 0;
+  padding: 10px 14px;
+  background: alpha(@bg, 0.6);
+  border: 2px solid @border;
+  border-radius: var(--border-radius);
+}
+
+.widget-dnd {
+  margin-top: 8px;
+}
+
 /* Title widget */
 .widget-title > label {
   margin-right: 8px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .widget-title > button {
   margin-left: 8px;
+  padding: 4px 12px;
   border-radius: var(--border-radius);
+  background: alpha(@accent, 0.18);
+  color: @fg;
+  border: none;
+}
+
+.widget-title > button:hover {
+  background: @accent;
+  color: @bg;
 }
 
 /* DND widget */
@@ -409,12 +435,21 @@ notificationwindow, blankwindow, blankwindow {
 }
 
 .widget-dnd switch {
-  border-radius: var(--border-radius);
+  border-radius: 999px;
   margin-left: 8px;
+  background: alpha(@fg, 0.15);
+  border: none;
+  min-width: 44px;
+}
+
+.widget-dnd switch:checked {
+  background: @accent;
 }
 
 .widget-dnd switch slider {
-  border-radius: var(--border-radius);
+  border-radius: 999px;
+  background: @fg;
+  margin: 2px;
 }
 
 /* Label widget */

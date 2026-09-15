@@ -49,3 +49,16 @@ hl.window_rule({
     workspace = "special:magic",
 })
 
+-- Slide the swaync control center in from the right (it's anchored
+-- top+right in swaync/config.json) instead of the global "layers" fade
+-- used by every other layer-shell surface (waybar, swayosd, rofi).
+hl.layer_rule({
+    match = {
+        namespace = "^swaync-control-center$",
+    },
+    -- Force the right edge: without an explicit edge, Hyprland picks
+    -- whichever screen edge the panel's center is closest to, which for
+    -- a corner-anchored panel like this one was resolving to "top".
+    animation = "slide right",
+})
+
