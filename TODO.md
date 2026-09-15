@@ -91,7 +91,7 @@ proper contrast thresholds) and drive colours from the wallpaper everywhere.
 | Screenshot menu — `Print` → rofi (Region/Window/Full/Delayed) → `hyprshot` → `swappy`, save to `~/Pictures/Screenshots/` + clipboard | P1 | S | | ✅ done | `hyprshot`/`grim`/`slurp` installed but unbound |
 | On-screen display — `swayosd` | P1 | M | | ✅ done | No visual feedback on fn keys |
 | `power-profiles-daemon` + add to waybar module list | P2 | S | | ✅ done | Installed + enabled; added to `modules-right` in `config.jsonc` |
-| `hyprpolkit-agent` + autostart | P2 | S | | todo | Nothing draws privilege prompts (USB mount in Thunar, GParted, gnome-disks fail silently) |
+| `hyprpolkit-agent` + autostart | P2 | S | | ✅ done | Package is `hyprpolkitagent`; ships its own systemd user service — `systemctl --user enable --now hyprpolkitagent.service`, no autostart.lua entry needed |
 | Track `~/.vim_runtime/my_configs.vim` in the `vim` stow package | P2 | M | | todo | Leader maps, plugins, colours to match |
 | Ranger JSON preview | P2 | S | | todo | `scope.sh` + `jq` |
 | `xdg-desktop-portal-hyprland` | P3 | S | | todo | Only needed if screen-sharing (Discord/browser) |
