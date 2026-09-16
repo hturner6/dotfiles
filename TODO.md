@@ -43,7 +43,7 @@ proper contrast thresholds) and drive colours from the wallpaper everywhere.
 | Template: wlogout | P2 | S | | todo | Restyle only — functionality is fine |
 | Template: rofi | P2 | S | | todo | Was "use pywal colors" |
 | Restyle swaync panel + DND toggle | P3 | S | | ✅ done | `style.css` now imports `theme/colors.css`; overrides the stock gray `:root` vars (notif bg/border/text/hover) to match waybar/rofi |
-| `hypr/colors.conf` fed by wallust | P2 | S | | todo | Was "define colors in hypr/config/colors.conf" |
+| `hypr/colors.conf` fed by wallust | P2 | S | | ✅ done | `theme.lua` reads `~/.cache/wallust/colors-hyprland.conf` directly (landed as part of the wallust migration) |
 | `wallpaper.sh` regenerates palette + reloads waybar/rofi/swaync/hypr | P2 | S | | todo | The "persist color schemes" item, done properly |
 
 ## Hypr
