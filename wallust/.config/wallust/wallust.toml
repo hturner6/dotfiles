@@ -1,0 +1,14 @@
+# wallust config — replaces pywal (see TODO.md)
+
+# Mimics pywal's own color-extraction algorithm for a similar look to the
+# previous pywal-generated palettes.
+backend = "wal"
+color_space = "lab"
+palette = "dark16"
+
+# Bar/menu text stayed illegible with some wallpapers under pywal; this
+# nudges generated colors toward readable contrast against the background.
+check_contrast = true
+
+[templates]
+hyprland = { template = 'hyprland.conf', target = '~/.cache/wallust/colors-hyprland.conf' }

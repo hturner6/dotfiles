@@ -3,7 +3,7 @@ FOLDER=~/Pictures/wallpapers
 
 set_wallpaper() {
     local IMAGE="$1"
-    wal -i "$IMAGE" --contrast 2
+    wallust pywal -i "$IMAGE"
     hyprctl hyprpaper preload "$IMAGE"
     hyprctl hyprpaper wallpaper "eDP-1,$IMAGE"
 }
@@ -19,7 +19,7 @@ menu() {
 case "$#" in
     0) menu ;;
     1) set_wallpaper "$1" ;;
-    2) wal -i "$1" --theme $2 --contrast 2
+    2) wallust pywal -i "$1" -f "$2"
        hyprctl hyprpaper preload "$1"
        hyprctl hyprpaper wallpaper "eDP-1,$1" ;;
     *) exit 0 ;;
