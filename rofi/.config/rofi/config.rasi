@@ -5,7 +5,7 @@
  *
  **/
 
- @import "~/.cache/wal/colors-rofi-dark"
+ @import "~/.cache/wallust/colors-rofi-dark"
  @import "~/.config/rofi/theme.rasi"
 
 configuration {

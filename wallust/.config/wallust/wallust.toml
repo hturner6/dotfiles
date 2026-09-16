@@ -18,3 +18,4 @@ saturation = 60
 [templates]
 hyprland = { template = 'hyprland.conf', target = '~/.cache/wallust/colors-hyprland.conf' }
 waybar = { template = 'waybar.css', target = '~/.cache/wallust/colors-waybar.css' }
+rofi = { template = 'rofi-dark.rasi', target = '~/.cache/wallust/colors-rofi-dark.rasi' }

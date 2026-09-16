@@ -12,10 +12,9 @@ rules. Imported by:
 | waybar  | `~/.config/waybar/style.css`  | GTK3  |
 | swayosd | `~/.config/swayosd/style.css` | GTK4  |
 
-The concrete colours come from pywal (`~/.cache/wal/colors-waybar.css`),
-which `colors.css` imports and then re-maps to semantic names. After the
-**wallust migration** (see repo `TODO.md`), `colors.css` becomes a wallust
-template — importers don't change.
+The concrete colours come from wallust (`~/.cache/wallust/colors-waybar.css`),
+which `colors.css` imports and then re-maps to semantic names. Importers
+don't need to change if the underlying palette source changes again.
 
 ## Changing the look
 

@@ -140,7 +140,7 @@ alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push origin master'
 
-(cat ~/.cache/wal/sequences &)
+(cat ~/.cache/wallust/sequences &)
 
 # Created by `pipx` on 2025-09-03 23:19:23
 export PATH="$PATH:/home/hturner/.local/bin"
