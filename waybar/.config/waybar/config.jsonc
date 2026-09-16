@@ -229,14 +229,7 @@
 		"tooltip": true,
         "tooltip-format": "{text} outdated packages",
         "exec": "checkupdates | wc -l",       // # of updates
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/menus/run_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"run": "rofi -show drun",
-			"reload": "$HOME/.config/waybar/scripts/reload.sh",
-			"neofetch": "kitty --hold --detach -e neofetch",
-			"update": "kitty --hold -e sudo pacman -Syu"
-		}
+		"on-click": "$HOME/.config/waybar/scripts/run_menu.sh"
     },
     "custom/pacman": {
         "format": "{text}  ",
