@@ -74,7 +74,7 @@ label:focus {
 #mode,
 #idle_inhibitor,
 #scratchpad,
-#power-profiles-daemon,
+#custom-power-profile,
 #custom-pacman,
 #custom-media,
 #custom-notification,
@@ -96,21 +96,27 @@ label:focus {
    glyphs sit visually left of their advance box, so nudge padding right
    to re-center them. */
 #idle_inhibitor,
-#power-profiles-daemon {
+#custom-power-profile {
     padding: 0 12px 0 8px;
 }
 
 /* THEME: same colour as #battery — visually groups it with the battery
    pills it sits next to now, since it's really "battery performance". */
-#power-profiles-daemon {
+#custom-power-profile {
     color: @color6;
+}
+
+/* .charging: reported by power_profile.sh when on AC, same colour as
+   #battery.charging so the whole pill agrees about being plugged in. */
+#custom-power-profile.charging {
+    color: #26A65B;
 }
 
 /* THEME: merge power-profiles-daemon + battery + battery#bat1 into one
    pill (modules-right order: power-profiles-daemon, battery, battery.bat1).
    Waybar's "module#name" syntax makes both battery instances share the
    #battery id and adds a .bat1 class to the second one. */
-#power-profiles-daemon {
+#custom-power-profile {
     border-radius: 12px 0 0 12px;
     border-right: none;
     margin-right: 0;
@@ -239,7 +245,10 @@ label:focus {
     color: @color6;
 }
 
-#battery.charging, #battery.plugged {
+/* .not-charging: plugged in but throttled by a charge-limit/conservation
+   threshold (sysfs status "Not charging") — still counts as "on AC" for
+   colour purposes. */
+#battery.charging, #battery.plugged, #battery.not-charging {
     color: #26A65B;
 }
 

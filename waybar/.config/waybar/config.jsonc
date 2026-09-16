@@ -23,7 +23,7 @@
         "network",
         "bluetooth",
         "backlight",
-        "power-profiles-daemon",
+        "custom/power-profile",
         "battery",
         "battery#bat1",
         "clock",
@@ -159,16 +159,13 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "custom/power-profile": {
       "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
+      "return-type": "json",
+      "exec": "$HOME/.config/waybar/scripts/power_profile.sh",
+      "on-click": "$HOME/.config/waybar/scripts/power_profile_cycle.sh",
+      "interval": 5,
+      "signal": 9
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
