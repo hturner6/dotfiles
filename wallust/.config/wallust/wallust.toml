@@ -12,3 +12,4 @@ check_contrast = true
 
 [templates]
 hyprland = { template = 'hyprland.conf', target = '~/.cache/wallust/colors-hyprland.conf' }
+waybar = { template = 'waybar.css', target = '~/.cache/wallust/colors-waybar.css' }

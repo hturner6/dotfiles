@@ -176,7 +176,9 @@ label:focus {
 }
 
 #workspaces button.empty {
-    color: #666666;
+    /* Theme-relative instead of a fixed gray, so it stays legible against
+       both light and dark wallust palettes. */
+    color: alpha(@foreground, 0.5);
 }
 
 #workspaces button.active {
