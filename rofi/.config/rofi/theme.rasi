@@ -34,7 +34,28 @@
 }
 
 #prompt {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
     text-color: @accent;
+}
+
+#textbox-prompt-colon {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+
+#entry {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+
+#case-indicator {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
 }
 
 #listview {
