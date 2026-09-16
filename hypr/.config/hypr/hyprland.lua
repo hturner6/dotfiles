@@ -18,8 +18,9 @@ hl.monitor({
 
 -- See https://wiki.hypr.land/Configuring/Environment-variables/
 
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("XCURSOR_THEME", "BreezeX-Dark")
+hl.env("XCURSOR_SIZE", "30")
+hl.env("HYPRCURSOR_SIZE", "30")
 
 --##################
 --## PERMISSIONS ###
