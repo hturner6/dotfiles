@@ -10,6 +10,11 @@ palette = "dark16"
 # nudges generated colors toward readable contrast against the background.
 check_contrast = true
 
+# The "wal"/"lab" combo above mimics pywal closely but tends toward washed
+# out, low-chroma colors — the waybar/hyprland border accents (@color9)
+# were reading as plain gray. Boost saturation to keep them colorful.
+saturation = 60
+
 [templates]
 hyprland = { template = 'hyprland.conf', target = '~/.cache/wallust/colors-hyprland.conf' }
 waybar = { template = 'waybar.css', target = '~/.cache/wallust/colors-waybar.css' }
