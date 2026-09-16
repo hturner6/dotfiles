@@ -21,6 +21,7 @@ hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(home .. "/.config/hypr/script
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/clipboard.sh"))
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/clipboard.sh delete"))
 hl.bind("Print", hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/screenshot.sh"))
+hl.bind("SHIFT + Print", hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/screenshot-full.sh"))
 
 -- Control bindings
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
