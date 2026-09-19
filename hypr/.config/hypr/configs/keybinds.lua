@@ -42,6 +42,11 @@ hl.bind(mainMod .. " + F", hl.dsp.exec_cmd('hyprctl dispatch \'hl.dsp.window.ful
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(defaults.lockscreen))
 hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd(defaults.notificationMenu))
 
+-- Cheat sheet of all keybinds. A true "double-tap Super" bind isn't
+-- reliably supported by Hyprland's dispatcher, so Super+Shift+/ stands in
+-- for it (mirrors the common "?" shortcuts-help convention).
+hl.bind(mainMod .. " + SHIFT + slash", hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/cheatsheet.sh"))
+
 -- Move window focus
 hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
